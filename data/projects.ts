@@ -12,7 +12,7 @@ export const projects: Project[] = [
     description:
       'Sistema web para gestión de servicios, usuarios/roles/permisos, inventarios y facturación. Despliegue en red para múltiples usuarios.',
     logo: '/logos/vsc.svg',
-    link: '#',
+    link: 'https://github.com/unah-hardlan/SIGSIH',
     slug: 'hardlan',
   },
   {
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description:
       'Sistema web para automatizar el proceso de práctica profesional con control de acceso y módulos funcionales.',
     logo: '/logos/react_icon.svg',
-    link: '#',
+    link: 'https://github.com/ALLANMILLA/PPS',
     slug: 'practica-profesional',
   },
   {
