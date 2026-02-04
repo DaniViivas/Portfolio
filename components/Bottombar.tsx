@@ -8,13 +8,19 @@ import {
 import { SiNextdotjs } from 'react-icons/si';
 
 import styles from '@/styles/Bottombar.module.css';
+import { profile } from '@/data/profile';
 
 const Bottombar = () => {
   return (
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
         <a
-          href="https://github.com/itsnitinr/vscode-portfolio"
+          href={
+            profile.links.github?.href ||
+            (profile.github.username
+              ? `https://github.com/${profile.github.username}`
+              : '#')
+          }
           target="_blank"
           rel="noreferrer noopener"
           className={styles.section}

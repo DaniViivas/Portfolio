@@ -1,28 +1,29 @@
 import Head from 'next/head';
+import { profile } from '@/data/profile';
 
 interface CustomHeadProps {
   title: string;
 }
 
 const CustomHead = ({ title }: CustomHeadProps) => {
+  const ogUrl = profile.seo.siteUrl || profile.links.website?.href;
   return (
     <Head>
       <title>{title}</title>
       <meta
         name="description"
-        content="Nitin Ranganath is an avid full stack web developer building websites and applications you'd love to use"
+        content={profile.seo.description}
       />
-      <meta
-        name="keywords"
-        content="nitin ranganath, nitin, ranganath, web developer portfolio, nitin web developer, nitin developer, mern stack, nitin ranganath portfolio, vscode-portfolio"
-      />
-      <meta property="og:title" content="Nitin Ranganath's Portfolio" />
+      <meta name="keywords" content={profile.seo.keywords} />
+      <meta property="og:title" content={`${profile.fullName} | Portfolio`} />
       <meta
         property="og:description"
-        content="A full-stack developer building websites that you'd like to use."
+        content={profile.seo.description}
       />
-      <meta property="og:image" content="https://imgur.com/4zi5KkQ.png" />
-      <meta property="og:url" content="https://vscode-portfolio.vercel.app" />
+      {profile.seo.ogImage ? (
+        <meta property="og:image" content={profile.seo.ogImage} />
+      ) : null}
+      {ogUrl ? <meta property="og:url" content={ogUrl} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
   );
@@ -31,5 +32,5 @@ const CustomHead = ({ title }: CustomHeadProps) => {
 export default CustomHead;
 
 CustomHead.defaultProps = {
-  title: 'Nitin Ranganath',
+  title: profile.seo.defaultTitle,
 };

@@ -9,9 +9,14 @@
   justify-content: center;
 }
 
-.container > * {
+.container>* {
   flex: 1;
   max-width: 600px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .container h1 {
@@ -53,7 +58,7 @@
     padding: 2rem 1rem;
   }
 
-  .container > div:first-child {
+  .container>div:first-child {
     border-right: none;
     margin-bottom: 2rem;
   }

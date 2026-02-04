@@ -9,12 +9,18 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const isLinkEnabled = Boolean(project.link && project.link !== '#');
+
   return (
     <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={isLinkEnabled ? project.link : undefined}
+      target={isLinkEnabled ? '_blank' : undefined}
+      rel={isLinkEnabled ? 'noopener noreferrer' : undefined}
       className={styles.card}
+      aria-disabled={!isLinkEnabled}
+      onClick={(e) => {
+        if (!isLinkEnabled) e.preventDefault();
+      }}
     >
       <div className={styles.content}>
         <div className={styles.logoWrapper}>

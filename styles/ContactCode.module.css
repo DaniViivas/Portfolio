@@ -50,6 +50,18 @@
   color: var(--accent-color);
 }
 
+.jsonKey {
+  color: var(--accent-color);
+}
+
+.jsonString {
+  color: var(--text-secondary);
+}
+
+.punctuation {
+  color: grey;
+}
+
 @media screen and (max-width: 600px) {
   .code {
     font-size: 0.85rem;

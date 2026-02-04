@@ -61,6 +61,41 @@
   font-weight: 500;
 }
 
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.badge {
+  height: 28px;
+  width: auto;
+  max-width: 100%;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.statsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.5rem 0;
+}
+
+.visitCount {
+  display: inline-block;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     padding: 2rem 1rem;
@@ -83,5 +118,9 @@
   .paragraph {
     font-size: 0.95rem;
     line-height: 1.65;
+  }
+
+  .badge {
+    height: 26px;
   }
 }

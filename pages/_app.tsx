@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 
 import Layout from '@/components/Layout';
 import Head from '@/components/Head';
+import { profile } from '@/data/profile';
 
 import '@/styles/globals.css';
 import '@/styles/themes.css';
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Layout>
-      <Head title={`Nitin Ranganath | ${pageProps.title}`} />
+      <Head title={`${profile.seo.defaultTitle} | ${pageProps.title}`} />
       <Component {...pageProps} />
     </Layout>
   );
