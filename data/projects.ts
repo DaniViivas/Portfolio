@@ -17,7 +17,7 @@ export const projects: Project[] = [
   },
   {
     title:
-      'Sistema de Gestión de Práctica Profesional – Facultad de Informática Administrativa (UNAH-CU)',
+      'Sistema de Gestión de Práctica Profesional',
     description:
       'Sistema web para automatizar el proceso de práctica profesional con control de acceso y módulos funcionales.',
     logo: '/logos/react_icon.svg',
