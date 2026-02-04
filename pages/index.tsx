@@ -15,7 +15,6 @@ export default function HomePage() {
     { code: '   const developerInfo = {', type: 'variable' },
     { code: `     name: '${profile.fullName}',`, type: 'array-item' },
     { code: `     role: '${profile.headline}',`, type: 'array-item' },
-    { code: `     bio: '${profile.summary.split('. ')[0]}.'`, type: 'array-item' },
     { code: '   };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '   useEffect(() => {', type: 'nested-function' },
