@@ -111,6 +111,11 @@ export const profile: Profile = {
         ],
     },
     links: {
+        website: {
+            label: 'Website',
+            href: 'https://portfolio-puce-seven-90.vercel.app/',
+            display: 'portfolio-puce-seven-90.vercel.app',
+        },
         cv: {
             label: 'CV',
             href: '/cv-osman-vivas.pdf',

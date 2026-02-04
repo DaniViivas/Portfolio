@@ -6,10 +6,11 @@ import styles from '@/styles/ProjectsPage.module.css';
 const ProjectsPage = () => {
   return (
     <div className={styles.layout}>
-      <h1 className={styles.pageTitle}>My Projects</h1>
+      <h1 className={styles.pageTitle}>Proyectos</h1>
       <p className={styles.pageSubtitle}>
-        Here&apos;s a collection of my recent work. These projects showcase my
-        skills in web development, design, and problem-solving.
+        Una selección de mis trabajos recientes. Estos proyectos reflejan mis
+        habilidades en desarrollo web y la construcción de soluciones
+        funcionales.
       </p>
 
       <div className={styles.container}>
@@ -23,7 +24,7 @@ const ProjectsPage = () => {
 
 export async function getStaticProps() {
   return {
-    props: { title: 'Projects' },
+    props: { title: 'Proyectos' },
   };
 }
 

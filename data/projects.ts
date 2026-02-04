@@ -24,4 +24,12 @@ export const projects: Project[] = [
     link: '#',
     slug: 'practica-profesional',
   },
+  {
+    title: 'AuthSystem – Gestión de login, usuarios, permisos y roles',
+    description:
+      'Backend para autenticación y autorización: inicio de sesión, administración de usuarios, roles y permisos, con control de acceso por endpoints.',
+    logo: '/logos/js_icon.svg',
+    link: 'https://github.com/DaniVivas/AuthSystem',
+    slug: 'authsystem',
+  },
 ];
