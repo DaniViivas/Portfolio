@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description:
       'Backend para autenticación y autorización: inicio de sesión, administración de usuarios, roles y permisos, con control de acceso por endpoints.',
     logo: '/logos/js_icon.svg',
-    link: 'https://github.com/DaniVivas/AuthSystem',
+    link: 'https://github.com/DaniViivas/AuthSystem',
     slug: 'authsystem',
   },
 ];
