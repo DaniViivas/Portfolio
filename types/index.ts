@@ -27,6 +27,10 @@ export interface Repo {
   stargazers_count: number;
   html_url: string;
   homepage: string;
+  fork?: boolean;
+  owner?: {
+    login: string;
+  };
 }
 
 export interface User {

@@ -99,13 +99,27 @@ export async function getStaticProps() {
     };
   }
 
+  const normalizedUsername = String(username).trim().toLowerCase();
+
   const userRes = await fetch(`https://api.github.com/users/${username}`);
-  const user = await userRes.json();
+  const user = userRes.ok
+    ? await userRes.json()
+    : { login: username, avatar_url: '', public_repos: 0, followers: 0 };
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${username}/repos?sort=pushed&per_page=6`
+    `https://api.github.com/users/${username}/repos?type=owner&sort=pushed&per_page=30`
   );
-  const repos = await repoRes.json();
+  const reposRaw = repoRes.ok ? await repoRes.json() : [];
+
+  const repos = Array.isArray(reposRaw)
+    ? reposRaw
+      .filter(
+        (repo) =>
+          repo?.owner?.login?.toLowerCase() === normalizedUsername &&
+          repo?.fork !== true
+      )
+      .slice(0, 6)
+    : [];
 
   return {
     props: { title: 'GitHub', repos, user },
