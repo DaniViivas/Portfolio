@@ -10,7 +10,7 @@ const AboutPage = () => {
 
         <div className={styles.aboutContent}>
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>💫 About Me:</h2>
+            <h2 className={styles.sectionTitle}>💫 Sobre mí:</h2>
             <p className={styles.paragraph}>
               Estudiante de Informática Administrativa con sólida formación
               técnica y vocación de servicio. Combino mis conocimientos en
@@ -24,7 +24,7 @@ const AboutPage = () => {
           </section>
 
           <section className={styles.section}>
-            <h2 className={styles.sectionTitle}>💻 Tech Stack:</h2>
+            <h2 className={styles.sectionTitle}>💻 Tecnologías:</h2>
             <div className={styles.badges}>
               <img
                 className={styles.badge}
@@ -158,6 +158,23 @@ const AboutPage = () => {
                 loading="lazy"
                 src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
               />
+            </div>
+          </section>
+
+          <section className={styles.section}>
+            <h2 className={styles.sectionTitle}>🤝 Habilidades blandas:</h2>
+            <div className={styles.badges}>
+              {profile.skills.softSkills.map((skill) => (
+                <img
+                  key={skill}
+                  className={styles.badge}
+                  alt={skill}
+                  loading="lazy"
+                  src={`https://img.shields.io/badge/${encodeURIComponent(
+                    skill
+                  )}-8B5CF6.svg?style=for-the-badge&logoColor=white`}
+                />
+              ))}
             </div>
           </section>
 

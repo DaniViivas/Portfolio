@@ -107,13 +107,14 @@ export const profile: Profile = {
             'Adaptabilidad',
             'Comunicación efectiva',
             'Trabajo en equipo',
+            'Responsabilidad y fiabilidad',
         ],
     },
     links: {
         cv: {
             label: 'CV',
             href: '/cv-osman-vivas.pdf',
-            display: 'Download CV',
+            display: 'Descargar CV',
         },
         whatsapp: {
             label: 'WhatsApp',
